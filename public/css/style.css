@@ -1,0 +1,750 @@
+/*Fuentes personalizada*/
+@font-face {
+  font-family: 'Futura Condensed';
+  src: url('fuentes/FuturaCondensedExtraBold.otf');
+  font-weight: bold;
+  font-style: bold;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* empezamos formateando el css para que no tenga todo por defecto si no todo en 0 */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#carrito-count {
+  color: #fff;
+  background-color: #333 !important;
+}
+
+.position-absolute {
+  background-color: #111;
+}
+
+.bordered {
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#img-carritobt {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+#img-carritobt:hover {
+  background-color: #fff;
+  color: #333;
+
+
+}
+
+#carrito-button {
+
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+#carrito-button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#img-carrito {
+  width: 30px;
+  height: auto;
+}
+
+#carrito {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 1000;
+  display: none;
+  width: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 5px 5px 20px #333;
+  overflow-x: hidden;
+}
+
+#carrito.bordered {
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+#carrito.mostrar {
+  display: block;
+}
+
+#lista-carrito {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#lista-carrito thead tr {
+  color: #fff;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#lista-carrito th,
+#lista-carrito td {
+  padding: 10px;
+  text-align: center;
+}
+
+#lista-carrito th {
+  font-weight: bold;
+}
+
+#lista-carrito tbody tr {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#lista-carrito tbody tr:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+#lista-carrito img {
+  width: 50px;
+  height: auto;
+}
+
+.btn-eliminar {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-eliminar:hover {
+  color: red;
+}
+
+#vaciar-carrito,
+#comprar-carrito {
+  display: block;
+  width: calc(50% - 10px);
+  background-color: #111;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-right: 10px;
+  transition: all 400ms;
+}
+
+#comprar-carrito {
+  float: right;
+}
+
+#vaciar-carrito:hover,
+#comprar-carrito:hover {
+  background: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+  #carrito {
+    top: 80px;
+    width: 90%;
+    right: 5%;
+    left: 5%;
+  }
+
+  #vaciar-carrito,
+  #comprar-carrito {
+    width: 100%;
+    float: none;
+    margin: 10px 0 0 0;
+  }
+
+  #comprar-carrito {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #carrito {
+    top: 60px;
+    padding: 10px;
+  }
+
+  #img-carrito {
+    width: 40px;
+  }
+
+  #lista-carrito th,
+  #lista-carrito td {
+    padding: 5px;
+  }
+}
+
+
+
+
+.listas {
+  margin: auto;
+  padding: auto;
+  text-align: left;
+}
+
+
+/* Estilo del header */
+.mainheader {
+  font-family: Futura Condensed;
+  font-weight: 700;
+  font-size: 3em;
+  /* Tamaño grande para el título principal */
+  text-align: center;
+  /* Centra el texto */
+  color: #111;
+  /* Color de texto similar al de Nike */
+  letter-spacing: 2px;
+  /* Añade espaciado entre letras */
+  margin-top: 20px;
+  /* Margen superior */
+  margin-bottom: 20px;
+  /* Margen inferior */
+}
+
+.video-header {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  /* Altura del header */
+  overflow: hidden;
+
+}
+
+/* Estilo del video header */
+#background-video {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+
+}
+
+/* Estilos para el artículo */
+article.catalogo {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  /* Fondo claro para resaltar el texto */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilos para el contenedor de productos */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  padding-top: 30px;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  /* Añadido para espacio entre columnas */
+}
+
+/* Estilo para cada producto */
+.col {
+  width: calc(33.33% - 40px);
+  margin: 20px;
+}
+
+.card {
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 1px 10px rgba(14, 13, 13, 0.2);
+  cursor: default;
+  transition: all 400ms ease;
+  text-align: center;
+}
+
+/* Estilo al pasar el cursor sobre la tarjeta */
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(95, 93, 228, 0.7);
+  transform: translateY(-3%);
+}
+
+/* Estilos para las imágenes de los productos */
+.card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+/* Estilos para el contenido dentro de la tarjeta */
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Estilos para los títulos dentro de la tarjeta */
+.card-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Estilos para los párrafos dentro de la tarjeta */
+.card-text {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+}
+
+/* Estilos para los enlaces dentro de la tarjeta */
+.card-body a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  transition: all 400ms;
+}
+
+/* Estilos al pasar el cursor sobre los enlaces dentro de la tarjeta */
+.card-body a:hover {
+  background: #fff;
+  color: #333;
+}
+
+/* Estilos para el pie de la tarjeta */
+.card-footer {
+  background-color: #fff;
+  border-top: none;
+  text-align: center;
+  padding: 10px;
+}
+
+.text-body-secondary {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+  color: #666;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 1000;
+  /* el z-index mientras mas alto sea mas se va a priorizar linealmente, por ende en el header priozamos el z-index para que no se opaque con las tarjetas */
+
+}
+
+.contenedor_iconos a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.contenedor_iconos a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.contenedor_iconos {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor_iconos a:last-child {
+  margin-left: auto;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: white !important;
+  /*!important para sobrescribir otros estilos de Bootstrap */
+}
+
+.dropdown-menu .dropdown-item {
+  color: white !important;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+  display: none;
+}
+
+/*aspecto visual del formulario: */
+body {
+  background-color: #f5f5f5;
+  /* Fondo claro para resaltar el texto */
+}
+
+form {
+  font-family: Roboto;
+  width: 60%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: Futura Condensed;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 2;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+input[type="submit"],
+button[type="reset"] {
+  padding: 10px 10px;
+  background-color: #181818;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button[type="reset"]:hover {
+  background-color: #181818;
+}
+
+/* Estilos para la parte de conocimientos previos*/
+.knowledge-checkbox {
+  gap: 10px;
+}
+
+.knowledge-checkbox input[type="checkbox"] {
+  width: auto;
+  margin-right: 15px;
+}
+
+.knowledge-checkbox label {
+  font-size: 1em;
+}
+
+.gender-radio {
+  font-size: 1em;
+}
+
+.gender-radio input[type="radio"] {
+  transform: scale(0.8);
+  margin-right: 1px;
+}
+
+.gender-radio label {
+  margin-right: 1px;
+}
+
+.gender-radio input[type="radio"] {
+  width: auto;
+
+}
+
+#background {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #3c005b;
+  background: -webkit-radial-gradient(center, ellipse cover, #3c005b 1%, #0d0011 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #3c005b 1%, #0d0011 100%);
+  background: -ie-radial-gradient(center, ellipse cover, #3c005b 1%, #0d0011 100%);
+}
+
+#logocontainer {
+  display: block;
+  position: fixed;
+  top: 10px;
+  /* Ajusta la distancia desde la parte superior */
+  left: 10px;
+  /* Ajusta la distancia desde la izquierda */
+  width: 5vh;
+  /* Ajusta el ancho del contenedor al 50% */
+  height: 5vh;
+  /* Ajusta la altura del contenedor al 50% */
+  overflow: hidden;
+  transition: background-color 500ms;
+  cursor: pointer;
+}
+
+#pelogo {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5vh;
+  /* Ajusta el ancho del logo al 50% */
+  height: 5vh;
+  /* Ajusta la altura del logo al 50% */
+  background: #34324b;
+  background: -moz-linear-gradient(-45deg, #34324b 0%, #161222 100%);
+  background: -webkit-linear-gradient(-45deg, #34324b 0%, #161222 100%);
+  background: linear-gradient(135deg, #34324b 0%, #161222 100%);
+  background-size: contain;
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 2vh;
+  /* Ajusta el tamaño de la fuente al 50% */
+  font-weight: bold;
+  color: #3ebffa;
+  text-align: center;
+  line-height: 5vh;
+  /* Alinea el texto verticalmente */
+}
+
+.loader {
+  display: block;
+  position: absolute;
+  background-color: #3ebffa;
+}
+
+
+@keyframes slide1 {
+  50% {
+    width: 32vh;
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 32vh;
+  }
+}
+
+@keyframes slide2 {
+  50% {
+    height: 32vh;
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 32vh;
+  }
+}
+
+@keyframes slide3 {
+  50% {
+    width: 32vh;
+    margin-right: 0;
+  }
+
+  100% {
+    margin-right: 32vh;
+  }
+}
+
+@keyframes slide4 {
+  50% {
+    height: 32vh;
+    margin-bottom: 0;
+  }
+
+  100% {
+    margin-bottom: 32vh;
+  }
+}
+
+.animated-header span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: drop 0.5s forwards;
+}
+
+@keyframes drop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mainheader {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: rgb(15, 15, 15);
+  /* Ajusta el color del texto si es necesario */
+  padding: 20px;
+  /* Ajusta el padding si es necesario */
+}
+
+.animated-header span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: drop 0.5s forwards;
+  text-shadow: 5px 5px 5px rgba(95, 93, 228, 0.7);
+  /* Ajusta el color y el tamaño del sombreado */
+}
+
+@keyframes drop {
+  to {
+    opacity: 3;
+    transform: translateY(0);
+  }
+}
+
+.catalogo {
+  background-image: url('imagenes/fondo.jpg');
+  /* Reemplaza 'fondo.jpg' con la ruta de tu imagen */
+  background-repeat: repeat;
+  /* Hace que la imagen se repita */
+  background-size: auto;
+  /* Ajusta el tamaño de la imagen */
+  background-position: center;
+  /* Centra la imagen de fondo */
+  padding: 20px;
+  /* Opcional: agrega padding si es necesario */
+}
+
+/*estilo de galerias*/
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-main img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery-thumbnails img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.gallery-thumbnails img.active {
+  border-color: #000;
+}
+
+/*estilo de suscripcion a boletin*/
+.subscription-form {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+#subscribeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#subscribeMessage {
+  margin-top: 20px;
+  color: green;
+}

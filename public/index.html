@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/loginprueba.js">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indumentaria Deportiva 2k24</title>
+  <link rel="shortcut icon" href="imagenes/Logo_favi.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .catalogo {
+      background-image: url('imagenes/fondonav.png');
+      background-repeat: repeat;
+      /* Hace que la imagen se repita */
+      background-size: auto;
+      /* Ajusta el tamaño de la imagen */
+      background-position: center;
+      /* Centra la imagen de fondo */
+      padding: 20px;
+      /* Opcional: agrega padding si es necesario */
+    }
+
+    /*estilos del aside*/
+    .custom-aside {
+      background-color: #cecece;
+      /* Color de fondo gris */
+      padding: 20px;
+      /* Relleno */
+      width: 95%;
+      /* Ancho del aside */
+      margin: 0 auto;
+      /* Centrar el aside */
+    }
+
+    .custom-aside h1 {
+      font-family: 'Futura Condensed';
+      display: block;
+    }
+
+    .custom-aside p {
+      font-family: Helvetica-Neue, Fabriga, -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      font-weight: normal;
+      text-align: justify;
+      column-gap: 30px;
+    }
+
+    .columnaside {
+      column-count: 2;
+      column-gap: 20px;
+    }
+
+    /*estilo del video demostrativo*/
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 ratio */
+      padding-top: 25px;
+      height: 0;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class='video-header'>
+    <video autoplay muted loop id="background-video">
+      <source src="video/fondo.mp4" type="video/mp4">
+    </video>
+  </section>
+  <br>
+  <br>
+
+  <header>
+    <div class="container__menu">
+      <div class="menu">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img src="imagenes/Logo_favi.png" alt="logito"
+                    width="40px"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="formulariotrabajo.html">Trabaja con
+                      nosotros</a>
+                  </li>
+                  <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Productos
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="index.html">Todos los productos</a></li>
+                      <li><a class="dropdown-item" href="camisetas.html">Camisetas</a></li>
+                      <li><a class="dropdown-item" href="pantalones.html">Pantalones</a></li>
+                      <li><a class="dropdown-item" href="camperas.html">Camperas</a></li>
+                    </ul>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar">
+                  <button class="btn btn-success" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-search" viewBox="0 0 16 16">
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="contenedor_iconos">
+              <a class="contenedor_insta" href="https://www.instagram.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                </svg>
+              </a>
+              <a class="contenedor_face" href="https://www.facebook.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                </svg>
+              </a>
+              <a class="contenedor_wsp" href="https://www.whatsapp.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-whatsapp" viewBox="0 0 16 16">
+                  <path
+                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                </svg>
+              </a>
+              <a class="" href="index.html">Tienda Deportiva 2k24</a>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-end navbar">
+              <a href="login.html" class="btn btn-outline-light me-2">Iniciar sesión</a>
+              <a href="login.html" class="btn btn-outline-light me-2">Registrarse</a>
+              <button id="img-carritobt" class="btn btn-success position-relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                </svg>
+                <span id="carrito-count"
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+              <div id="carrito" class="bordered">
+                <table id="lista-carrito">
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+                <a href="#" id="comprar-carrito" class="btn-2">Comprar</a>
+              </div>
+            </div>
+  </header>
+  <br> <br>
+  <br> <br>
+  <br>
+  <br>
+
+  <h1 class="mainheader animated-header">INDUMENTARIA DEPORTIVA 2K24</h1>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const textElement = document.querySelector('.animated-header');
+      const text = textElement.textContent;
+      textElement.innerHTML = '';  // Limpiar el contenido original
+
+      text.split("").forEach((char, index) => {
+        const span = document.createElement('span');
+        if (char === ' ') {
+          span.innerHTML = '&nbsp;'; // Maneja el espacio correctamente
+        } else {
+          span.textContent = char;
+        }
+        span.style.animationDelay = `${index * 0.1}s`; // Ajusta el retraso aquí
+        textElement.appendChild(span);
+      });
+    });
+  </script>
+  <script src="carrito.js"></script>
+  <!--caja general que va a contener todos el catalogo-->
+  <article class="catalogo">
+
+    <!--dentro de la caja general hacemos un div para disponer de los productos y modificarlos todos al mismo tiempo para que sean iguales los contenedores-->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/boca.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CAMISETA TITULAR BOCA JUNIORS 2023/2024</h5>
+            <p class="card-text">Camiseta Boca Juniors Temporada 23/24. Disponible en todos los talles
+            </p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$59.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/river.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CAMISETA TITULAR RIVER PLATE 2023/2024</h5>
+            <p class="card-text">Camiseta River Plate Temporada 23/24. Disponible en todos los talles
+            </p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$59.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/independiente.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CAMISETA TITULAR INDEPENDIENTE 2023/2024</h5>
+            <p class="card-text">Camiseta Independiente Temporada 23/24. Disponible en todos los talles
+            </p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$59.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/remera adidas roja.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">REMERA ADIDAS ROJA</h5>
+            <p class="card-text">Remera Adidas Roja Hombre. Disponible en todos los talles</p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$39.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/remera adidas run women.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">REMERA ADIDAS RUNNING MUJER WOMAN</h5>
+            <p class="card-text">Remera Adidas Naranja para Mujer. Disponible en todos los talles</p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$39.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/nike running azul.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">REMERA NIKE RUNNING</h5>
+            <p class="card-text">Remera Adidas Roja Hombre. Disponible en todos los talles</p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$39.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/campera boca.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CAMPERA BOCA ADIDAS</h5>
+            <p class="card-text">Campera Boca Juniors Adidas. Disponible en todos los talles</p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$119.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/campera river adidas.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CAMPERA RIVER ADIDAS</h5>
+            <p class="card-text">Campera River Plate Adidas. Disponible en todos los talles</p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$119.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/campera rompeviento nike.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CAMPERA ROMPEVIENTOS NIKE</h5>
+            <p class="card-text">Campera Estilo ROMPEVIENTOS Nike. Disponible en todos los talles</p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$119.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/pantalon deportivo nike swoosh azul.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">PANTALON DEPORTIVO NIKE</h5>
+            <p class="card-text">Pantalon Deportivo Nike Swoosh Azul. Disponible en todos los talles</p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$79.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/pantalon deportivo nike swoosh rojo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">PANTALON DEPORTIVO NIKE</h5>
+            <p class="card-text">Pantalon Deportivo Nike Swoosh Rojo. Disponible en todos los talles</p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$79.999</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/joguin deportivo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">JOGGING DEPORTIVO URBAN</h5>
+            <p class="card-text">Pantalon Jogging Deportivo para Hombre. Disponible en todos los talles</p>
+            <a href="#">COMPRAR</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">$79.999</small>
+          </div>
+        </div>
+      </div>
+
+  </article>
+
+  <!-- aside con Bootstrap aplicado-->
+  <div class="container mt-5">
+    <!-- Contenedor para el contenido con un margen superior de 5 unidades -->
+    <aside class="custom-aside">
+      <!-- Elemento aside con estilos personalizados aplicados -->
+      <h1>PANTALONES DEPORTIVOS Y MAS</h1>
+      <!-- Primer título que abarca ambas columnas -->
+      <div class="row">
+        <!-- Fila para contener las columnas -->
+        <div class="columnaside">
+          <!-- Primera columna -->
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum augue sit amet libero consequat,
+            pellentesque molestie leo bibendum.
+            In gravida felis a lacus commodo lacinia. Duis felis sem, consectetur eu consequat ac, malesuada eget augue.
+            Pellentesque imperdiet velit non orci eleifend, nec mollis mauris bibendum.
+            Vivamus augue urna, aliquam ut scelerisque vitae, efficitur ut sapien. Phasellus vitae odio a mi dictum
+            sodales. Etiam eget dolor commodo, fringilla neque at, vehicula ante.
+            Sed sed ante tempor, efficitur augue non, finibus risus. Integer faucibus rhoncus neque, nec convallis neque
+            elementum ut.</p>
+        </div>
+        <h1>TU CASA DE DEPORTES PARA CUALQUIER DEPORTE</h1>
+        <!-- Segundo título que abarca ambas columnas -->
+        <div class="columnaside">
+          <!-- Segunda columna -->
+          <p>Cras non orci at massa vestibulum consectetur vitae vel risus. Orci varius natoque penatibus et magnis dis
+            parturient montes, nascetur ridiculus mus. Suspendisse potenti.
+            Vivamus vel ornare felis, vitae tempus mi. Suspendisse facilisis interdum nunc, ut venenatis quam finibus
+            vitae. Integer eget odio metus. Ut ac sapien sagittis, pretium velit luctus, fermentum eros. Quisque
+            sagittis vitae enim vel rhoncus.
+            Fusce feugiat lobortis est, in tincidunt nulla pellentesque non. Aenean non nunc eget nunc fringilla congue.
+            Mauris massa erat, porta pretium congue id, euismod sit amet elit.
+            Fusce eu dolor pulvinar.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Video ilustrativo -->
+  <div class="container mt-5">
+    <h2>VENI A CONOCERNOS</h2>
+    <div class="video-container">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/0g4eV8LN6Nw?si=2SVa72uXp3yzUgdL&amp;controls=0" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen muted="1" controls="0" autoplay="1"></iframe>
+    </div>
+  </div>
+  <br>
+  <br>
+
+ <!-- form de suscripcion -->
+ <div class="subscription-form">
+  <h2>Suscribite a nuestro boletín</h2>
+  <form id="subscribeForm">
+    <input type="email" id="subscribeEmail" placeholder="Tu correo electrónico" required>
+    <button type="submit">Suscribirse</button>
+  </form>
+  <div id="subscribeMessage"></div>
+</div>>
+  
+
+  <footer class="bg-dark text-warning text-center py-4">
+    <h3><i>Tienda deportiva 2k24</i></h3>
+    <div class="container">
+      <div class="row">
+        <div class="col text-white ">
+          <h5>Medios de pago</h5>
+          <ul class="list-unstyled">
+            <img src="imagenes\MediosDePago.png" alt="">
+          </ul>
+        </div>
+
+        <div class="col text-white">
+          <h5>Nosotros</h5>
+          <ul class="list-unstyled">
+            <li>Buenos Aires, Argentina</li>
+            <li>Tienda_2K24@example.com</li>
+            <li>+541111111</li>
+          </ul>
+        </div>
+        <div class="col text-white">
+          <h5>Ubicación</h5>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.6831862090157!2d-58.64219568514844!3d-34.81846928040983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab997f850e1%3A0xb53c6bfb65b10a8e!2sObelisco!5e0!3m2!1sen!2sar!4v1620652904647!5m2!1sen!2sar"
+            width="100" height="100" style="border: 10px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="bg-dark text-white text-center">
+          <li><i>Copyright © 2024 Todos los derechos reservados por parte de Tienda_2K24, somos más que una tienda.</i>
+          </li>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script src="js/loginprueba.js"></script>
+<script src="js/carrito.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/suscripcion.js"></script>
+</html>

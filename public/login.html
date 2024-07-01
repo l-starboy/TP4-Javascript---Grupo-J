@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>
+                    Bienvenido
+                </h2>
+                <p>
+                    Para poder realizar compras en nuestra web es necesario que inicies sesion
+                </p>
+                <input type="button" value="Iniciar sesion" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>
+                    Crea una cuenta
+                </h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <p>o usa tu email para registrarte</p>
+                <form action="/register" method="POST" class="form" onsubmit="redirectToNewPage()">
+                    <label>
+                        <i class='bx bx-user'></i>
+                        <input type="text" name="nombre_completo" placeholder="Nombre completo" required>
+                    </label>
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" name="correo_electronico" placeholder="Correo electronico" required>
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" name="contrasena" placeholder="Contraseña" required>
+                    </label>
+                    <input type="submit" value="Registrarse">
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>
+                    Bienvenido
+                </h2>
+                <p>
+                    Para poder realizar compras en nuestra web es necesario que estes registrado
+                </p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>
+                    Iniciar sesion
+                </h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <p>o iniciar sesion con una cuenta</p>
+                <form action="" class="form">
+                    <label for="">
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" placeholder="Correo electronico">
+                    </label>
+                    <label for="">
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña">
+                    </label>
+                    <input type="submit" value="Iniciar sesion">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/loginprueba.js"></script>
+
+</body>
+
+</html>
